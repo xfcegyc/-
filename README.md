@@ -1,2 +1,2 @@
-# itcast-ssm 黑马企业权限管理系统
-spring+springmvc+mybatis
+# itcast-ssm 
+企业权限管理系统，一个ssm整合小项目
