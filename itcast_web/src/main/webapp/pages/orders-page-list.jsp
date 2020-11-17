@@ -12,7 +12,7 @@
 
 
 
-<title>订单管理</title>
+<title>项目管理</title>
 <meta name="description" content="AdminLTE2定制版">
 <meta name="keywords" content="AdminLTE2定制版">
 
@@ -166,12 +166,12 @@
 			<!-- 内容头部 -->
 			<section class="content-header">
 				<h1>
-					订单管理 <small>订单列表</small>
+					项目评审管理 <small>评审列表</small>
 				</h1>
 				<ol class="breadcrumb">
 					<li><a href="${pageContext.request.contextPath}/index.jsp"><i class="fa fa-dashboard"></i> 首页</a></li>
-					<li><a href="${pageContext.request.contextPath}/orders/findAll.do">订单管理</a></li>
-					<li class="active">订单列表</li>
+					<li><a href="${pageContext.request.contextPath}/orders/findAll.do">评审管理</a></li>
+					<li class="active">评审列表</li>
 				</ol>
 			</section>
 			<!-- 内容头部 /-->
@@ -194,8 +194,7 @@
 							<div class="pull-left">
 								<div class="form-group form-inline">
 									<div class="btn-group">
-										<button type="button" class="btn btn-default" title="新建"
-											onclick="location.href='${pageContext.request.contextPath}/pages/product-add.jsp'">
+										<button type="button" class="btn btn-default" title="新建">
 											<i class="fa fa-file-o"></i> 新建
 										</button>
 										<button type="button" class="btn btn-default" title="删除">
@@ -231,11 +230,9 @@
 											id="selall" type="checkbox" class="icheckbox_square-blue">
 										</th>
 										<th class="sorting_asc">ID</th>
-										<th class="sorting_desc">订单编号</th>
-										<th class="sorting_asc sorting_asc_disabled">产品名称</th>
-										<th class="sorting_desc sorting_desc_disabled">金额</th>
-										<th class="sorting">下单时间</th>
-										<th class="text-center sorting">订单状态</th>
+										<th class="sorting_desc">评审编号</th>
+										<th class="sorting">提交时间</th>
+										<th class="text-center sorting">评审状态</th>
 										<th class="text-center">操作</th>
 									</tr>
 								</thead>
@@ -248,12 +245,9 @@
 											<td><input name="ids" type="checkbox"></td>
 											<td>${orders.id }</td>
 											<td>${orders.orderNum }</td>
-											<td>${orders.product.productName }</td>
-											<td>${orders.product.productPrice }</td>
 											<td>${orders.orderTimeStr }</td>
 											<td class="text-center">${orders.orderStatusStr }</td>
 											<td class="text-center">
-												<button type="button" class="btn bg-olive btn-xs">订单</button>
 												<button type="button" class="btn bg-olive btn-xs" onclick="location.href='${pageContext.request.contextPath}/orders/findById.do?id=${orders.id}'">详情</button>
 												<button type="button" class="btn bg-olive btn-xs">编辑</button>
 											</td>
@@ -274,34 +268,6 @@
 							<!--数据列表/-->
 
 							<!--工具栏-->
-							<div class="pull-left">
-								<div class="form-group form-inline">
-									<div class="btn-group">
-										<button type="button" class="btn btn-default" title="新建">
-											<i class="fa fa-file-o"></i> 新建
-										</button>
-										<button type="button" class="btn btn-default" title="删除">
-											<i class="fa fa-trash-o"></i> 删除
-										</button>
-										<button type="button" class="btn btn-default" title="开启">
-											<i class="fa fa-check"></i> 开启
-										</button>
-										<button type="button" class="btn btn-default" title="屏蔽">
-											<i class="fa fa-ban"></i> 屏蔽
-										</button>
-										<button type="button" class="btn btn-default" title="刷新">
-											<i class="fa fa-refresh"></i> 刷新
-										</button>
-									</div>
-								</div>
-							</div>
-							<div class="box-tools pull-right">
-								<div class="has-feedback">
-									<input type="text" class="form-control input-sm"
-										placeholder="搜索"> <span
-										class="glyphicon glyphicon-search form-control-feedback"></span>
-								</div>
-							</div>
 							<!--工具栏/-->
 
 						</div>
